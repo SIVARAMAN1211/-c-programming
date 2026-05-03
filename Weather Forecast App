@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+class Weather {
+public:
+    virtual void report() = 0;
+};
+
+class ChennaiWeather : public Weather {
+public:
+    void report() {
+        cout << "Sunny - 36 Degree";
+    }
+};
+
+int main() {
+    ChennaiWeather c;
+    c.report();
+}
