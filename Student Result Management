@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+class Result {
+public:
+    virtual void display() = 0;
+};
+
+class Student : public Result {
+public:
+    void display() {
+        cout << "Student Passed";
+    }
+};
+
+int main() {
+    Student s;
+    s.display();
+}
