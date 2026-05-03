@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+class Appointment {
+public:
+    virtual void booking() = 0;
+};
+
+class Doctor : public Appointment {
+public:
+    void booking() {
+        cout << "Appointment Booked";
+    }
+};
+
+int main() {
+    Doctor d;
+    d.booking();
+}
