@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+class Subscription {
+public:
+    virtual void plan() = 0;
+};
+
+class Premium : public Subscription {
+public:
+    void plan() {
+        cout << "Premium Plan Activated";
+    }
+};
+
+int main() {
+    Premium p;
+    p.plan();
+}
