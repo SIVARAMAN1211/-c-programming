@@ -1,0 +1,19 @@
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main() {
+    string name;
+    int mark;
+
+    cout << "Enter Name: ";
+    cin >> name;
+
+    cout << "Enter Mark: ";
+    cin >> mark;
+
+    ofstream file("student.txt");
+    file << name << " " << mark;
+
+    file.close();
+}
