@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+class Device {
+public:
+    virtual void status() = 0;
+};
+
+class Fan : public Device {
+public:
+    void status() {
+        cout << "Fan is ON";
+    }
+};
+
+int main() {
+    Fan f;
+    f.status();
+}
