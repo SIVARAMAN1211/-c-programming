@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+class Food {
+public:
+    virtual void order() = 0;
+};
+
+class Pizza : public Food {
+public:
+    void order() {
+        cout << "Pizza Ordered";
+    }
+};
+
+int main() {
+    Pizza p;
+    p.order();
+}
