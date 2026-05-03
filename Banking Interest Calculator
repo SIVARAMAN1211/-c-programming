@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+class Bank {
+public:
+    virtual void interest() {
+        cout << "Generic Interest";
+    }
+};
+
+class SBI : public Bank {
+public:
+    void interest() {
+        cout << "SBI Interest: 7%";
+    }
+};
+
+int main() {
+    SBI s;
+    s.interest();
+}
