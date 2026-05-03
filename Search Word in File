@@ -1,0 +1,17 @@
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main() {
+    ifstream file("data.txt");
+    string word;
+
+    while(file >> word) {
+        if(word == "GitHub") {
+            cout << "Found";
+            break;
+        }
+    }
+
+    file.close();
+}
