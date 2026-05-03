@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+class Cab {
+public:
+    virtual void fare() = 0;
+};
+
+class MiniCab : public Cab {
+public:
+    void fare() {
+        cout << "Fare: Rs.250";
+    }
+};
+
+int main() {
+    MiniCab m;
+    m.fare();
+}
