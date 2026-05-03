@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+class Product {
+public:
+    virtual void details() = 0;
+};
+
+class Mobile : public Product {
+public:
+    void details() {
+        cout << "iPhone 15 - Rs.70000";
+    }
+};
+
+int main() {
+    Mobile m;
+    m.details();
+}
