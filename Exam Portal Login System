@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+class Login {
+public:
+    virtual void access() = 0;
+};
+
+class StudentLogin : public Login {
+public:
+    void access() {
+        cout << "Student Logged In";
+    }
+};
+
+int main() {
+    StudentLogin s;
+    s.access();
+}
